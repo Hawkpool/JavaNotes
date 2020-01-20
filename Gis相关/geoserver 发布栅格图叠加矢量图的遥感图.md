@@ -10,15 +10,17 @@ geoserver默认支持读取tif栅格文件,但是文件必须在geoserver服务�
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500857-1579501082275.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500858-1579501084157.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500859-1579501085756.png)
 
 此处的路径是我在docker-compose文件中共享的文件目录,所以docker中的服务可以访问
-
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500860-1579501140235.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500861-1579501141749.png)
 
 配置完成后即可在Layer Preview中查看到显示效果
-![image.png](https://img.hacpai.com/file/2020/01/image-974f6a6a.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500862-1579501155681.png)
 
 再配置图层组与矢量网格图叠加
-![image.png](https://img.hacpai.com/file/2020/01/image-c7233abb.png)
+
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500863-1579501169727.png)
 看到那个小黑点了吗,那就是我们的栅格图...
-![image.png](https://img.hacpai.com/file/2020/01/image-7cdd291b.png)
+
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500864-1579501177874.png)
 至此,基本的图层叠加已经完成,但是....看这密密麻麻的格子,总得有个批量导入栅格图的途径吧
 
 原本是想要统一数据源,让shp和tif数据都从数据库读取,降低服务器存储空间的压力
