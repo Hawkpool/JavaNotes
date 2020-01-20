@@ -89,6 +89,9 @@ services:
 geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文件，不支持远程上传
 遂通过 postsql 导入，实现更佳的可用性
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498971-1579499408552.png)
+
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498972-1579499707768.png)
+
 完成 PostGIS 配置后，会自动跳转到图层配置
 
 #### 配置图层
