@@ -64,7 +64,7 @@ services:
 ### 从 ui 获取 shp 文件，操作入库(也可让 ui 自行操作)
 
 可以通过 **PostGis** 文件导入工具 导入 **PostSql**
-![image.png](https://img.hacpai.com/file/2020/01/image-6d5eb642.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/image-6d5eb642-1579498292071.png)
 
 > 切记
 >
@@ -72,7 +72,7 @@ services:
 > * 配置编码正确格式，包含中文的话尽量使用 UTF-8 或者 GBK
 > * **shp 文件同时还有 dbf 文件、prj 等文件考到同一个目录下，名字要一致**
 
->   ![image.png](https://img.hacpai.com/file/2020/01/image-f1e62604.png)
+>   
 >   **该工具需要 windows 本地安装 PostSql ,并安装 PostGis 方可链接数据库**
 给大家分享一个 postgis-ui 的下载链接，使用这个不需要安装 pgAdmin  
 链接：[下载链接](https://pan.baidu.com/s/1niJYnaZndn4Yy_7nXbTfHA) 密码：l1ml
