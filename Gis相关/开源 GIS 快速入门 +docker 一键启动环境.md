@@ -5,6 +5,7 @@
 因为缺少经费，且需求暂不明确，暂且不考虑需要付费但功能强大的**ArcGis**,于是参考了[开源WebGIS架构](https://blog.csdn.net/lijie45655/article/details/89606143)
 
 ![image.png](https://img.hacpai.com/file/2020/01/image-65002c25.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/image-65002c25-1579498253988.png)
 
 > 经前端后端 ui 以及 cto 的联合商讨，大致确定
 >
