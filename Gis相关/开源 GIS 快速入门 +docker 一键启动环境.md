@@ -71,8 +71,7 @@ services:
 > * shp 文件存放目录尽量简单，不要包含中文(否则容易报错)
 > * 配置编码正确格式，包含中文的话尽量使用 UTF-8 或者 GBK
 > * **shp 文件同时还有 dbf 文件、prj 等文件考到同一个目录下，名字要一致**
-
->   
+>   ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498968-1579499358099.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498969-1579499368605.png)
 >   **该工具需要 windows 本地安装 PostSql ,并安装 PostGis 方可链接数据库**
 给大家分享一个 postgis-ui 的下载链接，使用这个不需要安装 pgAdmin  
 链接：[下载链接](https://pan.baidu.com/s/1niJYnaZndn4Yy_7nXbTfHA) 密码：l1ml
@@ -85,14 +84,13 @@ services:
 
 #### 配置工作区
 
-![image.png](https://img.hacpai.com/file/2020/01/image-946576f9.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498970-1579499399148.png)
 
 #### 配置数据存储
 
 geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文件，不支持远程上传
 遂通过 postsql 导入，实现更佳的可用性
-![image.png](https://img.hacpai.com/file/2020/01/image-96cb3957.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-643776df.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498971-1579499408552.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498972-1579499413744.png)
 完成 PostGIS 配置后，会自动跳转到图层配置
 
 #### 配置图层
