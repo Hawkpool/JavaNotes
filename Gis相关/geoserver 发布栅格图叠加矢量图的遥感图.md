@@ -7,9 +7,11 @@ geoserver从Postgis中读取shp文件可以参考[上一篇文章](https://hacpa
 
 geoserver发布tif文件教程如下
 geoserver默认支持读取tif栅格文件,但是文件必须在geoserver服务器本地目录下
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500857-1579501082275.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500858-1579501084157.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500859-1579501085756.png)
+
 此处的路径是我在docker-compose文件中共享的文件目录,所以docker中的服务可以访问
-![image.png](https://img.hacpai.com/file/2020/01/image-017c51c4.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-89335fc7.png)
+
+
 配置完成后即可在Layer Preview中查看到显示效果
 ![image.png](https://img.hacpai.com/file/2020/01/image-974f6a6a.png)
 
