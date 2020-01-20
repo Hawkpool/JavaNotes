@@ -44,27 +44,26 @@ geoserver默认支持读取tif栅格文件,但是文件必须在geoserver服务�
 经过修改Maven版本,重新导包,重新下包等一系列操作后发现问题根深蒂固,依旧存在,于是我决定去Maven仓库里面一探究竟
 果然,依赖的jar包没有下载下来,只有几个lastupdated文件
 
-
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500868-1579501313490.png)
 
 
 这就好办了,去maven官网找爹去
-![image.png](https://img.hacpai.com/file/2020/01/image-deb9c6ae.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500869-1579501322009.png)
 
 结果一找, 又懵逼了, 人家maven只有1.7的版本,还是16年发布的,现在都2020年了啊 !!!
 我抱着死马当活马医的态度试着测试修改版本号,依旧不行
 
 好吧, 那我找[geoserver-manager的仓库](https://repo.boundlessgeo.com/main/it/geosolutions/geoserver-manager/)去!!
-![image.png](https://img.hacpai.com/file/2020/01/image-450e25bb.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500870-1579501337728.png)
 乍一看好像来对地方了,但事实却是十分残酷的
-![image.png](https://img.hacpai.com/file/2020/01/image-e59c3734.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-432dc6d6.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500871-1579501348899.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500872-1579501350069.png)
 
 Maven仓库里的文件夹仍在,文件也能看到,但就是下载不了 !!!
 
 但我不信, 一定还有其他解决方案, google一番后,发现github上好像有一个[同名的开源项目](https://github.com/geosolutions-it/geoserver-manager)
 
 下载下来后,经过一键Maven构建打包四连后
-![image.png](https://img.hacpai.com/file/2020/01/image-a9e14c46.png)
+
 果然在仓库里出现了想要的画面
 ![image.png](https://img.hacpai.com/file/2020/01/image-71a997fa.png)
 
