@@ -128,10 +128,10 @@ geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文�
 然后我们就可以配置图层组了
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499909-1579500037150.png)
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499910-1579500047521.png)
-![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499911-1579500052197.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499911-1579500052197.png)![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499912-1579500057955.png)
 
 完成后即可保存查看预览效果
-![image.png](https://img.hacpai.com/file/2020/01/image-1399dd0e.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499913-1579500071496.png)
 
 [windows相关环境及文件](https://pan.baidu.com/s/1P4M_uxy04c34VJuoLImepA)    提取码: arne
 
