@@ -1,5 +1,3 @@
-![](https://img.hacpai.com/bing/20190511.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)
-
 我是革命一块砖，哪里需要往哪搬！身为全栈做的活挺多了，不过公司最近要用 geoserver 发布地图服务，又要开始了一个陌生的领域的探索。
 
 因为缺少经费，且需求暂不明确，暂且不考虑需要付费但功能强大的**ArcGis**,于是参考了[开源WebGIS架构](https://blog.csdn.net/lijie45655/article/details/89606143)
