@@ -85,6 +85,7 @@ services:
 #### 配置工作区
 
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498970-1579499399148.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498972-1579499427875.png)
 
 #### 配置数据存储
 
