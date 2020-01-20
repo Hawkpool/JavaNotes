@@ -71,7 +71,7 @@ services:
 > * shp 文件存放目录尽量简单，不要包含中文(否则容易报错)
 > * 配置编码正确格式，包含中文的话尽量使用 UTF-8 或者 GBK
 > * **shp 文件同时还有 dbf 文件、prj 等文件考到同一个目录下，名字要一致**
-![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/image-6d5eb642-1579498292071.png)
+
 >   ![image.png](https://img.hacpai.com/file/2020/01/image-f1e62604.png)
 >   **该工具需要 windows 本地安装 PostSql ,并安装 PostGis 方可链接数据库**
 给大家分享一个 postgis-ui 的下载链接，使用这个不需要安装 pgAdmin  
