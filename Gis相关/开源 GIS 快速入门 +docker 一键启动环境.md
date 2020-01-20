@@ -124,7 +124,7 @@ geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文�
 #### 配置图层组
 
 我们再通过上面操作配置一个点状图图层预览
-![image.png](https://img.hacpai.com/file/2020/01/image-b4850e2c.png)
+
 然后我们就可以配置图层组了
 ![image.png](https://img.hacpai.com/file/2020/01/image-f8f0c5bc.png)
 ![image.png](https://img.hacpai.com/file/2020/01/image-ade21549.png)
