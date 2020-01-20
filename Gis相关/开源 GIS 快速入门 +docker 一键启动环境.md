@@ -114,9 +114,10 @@ geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文�
 
 #### 查看图层预览图
 
-
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498977-1579499817549.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498978-1579499839961.png)
 点击 OpenLayers 后会打开一个新的页面
-![image.png](https://img.hacpai.com/file/2020/01/image-7161a893.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498979-1579499853093.png)
 
 一个地图边框图层预览，GET!
 
