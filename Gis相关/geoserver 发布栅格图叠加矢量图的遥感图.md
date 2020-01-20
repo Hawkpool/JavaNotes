@@ -7,9 +7,6 @@ geoserver从Postgis中读取shp文件可以参考[上一篇文章](https://hacpa
 
 geoserver发布tif文件教程如下
 geoserver默认支持读取tif栅格文件,但是文件必须在geoserver服务器本地目录下
-![image.png](https://img.hacpai.com/file/2020/01/image-959afcbd.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-1e668d67.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-946f24f6.png)
 此处的路径是我在docker-compose文件中共享的文件目录,所以docker中的服务可以访问
 ![image.png](https://img.hacpai.com/file/2020/01/image-017c51c4.png)
 ![image.png](https://img.hacpai.com/file/2020/01/image-89335fc7.png)
