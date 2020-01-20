@@ -26,11 +26,11 @@ geoserver默认支持读取tif栅格文件,但是文件必须在geoserver服务�
 原本是想要统一数据源,让shp和tif数据都从数据库读取,降低服务器存储空间的压力
 在参考文档[GeoServer发布PostGIS数据库中的栅格数据](https://www.jianshu.com/p/ef9e37f0aed8)后
 经过大量尝试,虽然tif文件入库成功,geoserver的imageMosaicJdbc插件也成功安装,但是在使用imageMosaicJdbc读取数据库数据的时候却一直无法连接,并一直报错
-![image.png](https://img.hacpai.com/file/2020/01/image-b8107764.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500865-1579501198090.png)
 经过问题排查和参数检查后,确认不是配置的问题,在百度和google之后终于在一个官方错误报告邮件记录上找到类似的错误
 [Image Mosaic failing to create reader again](http://osgeo-org.1560.x6.nabble.com/Image-Mosaic-failing-to-create-reader-again-td5365868.html)
 结果发现
-![image.png](https://img.hacpai.com/file/2020/01/image-5eb38ed3.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500866-1579501213342.png)
 大致意思是...有10多年历史的设计错误,改起来很麻烦..所以就没改了.........
 总而言之,使用插件的方式基本是宣告失败
 
