@@ -124,12 +124,11 @@ geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文�
 #### 配置图层组
 
 我们再通过上面操作配置一个点状图图层预览
-
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499908-1579500026434.png)
 然后我们就可以配置图层组了
-![image.png](https://img.hacpai.com/file/2020/01/image-f8f0c5bc.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-ade21549.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-5e923909.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-2005ac96.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499909-1579500037150.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499910-1579500047521.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579499911-1579500052197.png)
 
 完成后即可保存查看预览效果
 ![image.png](https://img.hacpai.com/file/2020/01/image-1399dd0e.png)
