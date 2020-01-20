@@ -63,9 +63,13 @@ Maven仓库里的文件夹仍在,文件也能看到,但就是下载不了 !!!
 但我不信, 一定还有其他解决方案, google一番后,发现github上好像有一个[同名的开源项目](https://github.com/geosolutions-it/geoserver-manager)
 
 下载下来后,经过一键Maven构建打包四连后
+
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500873-1579501373802.png)
+
 果然在仓库里出现了想要的画面
+
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579500874-1579501484194.png)
+
 回去一看批量导入项目的依赖问题也解决了
 
 仔细一看这套批量导入的项目代码,其实就是调用了geoserver的rest接口
