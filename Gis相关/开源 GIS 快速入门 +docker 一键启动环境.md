@@ -99,21 +99,22 @@ geoserver 原生支持识别 shp 文件，但是仅支持事变本机目录文�
 数据库中的数据就是地图的矢量数据
 图层有点像 ps 里的一个图层，通过解码对应坐标系解析矢量数据展示相应图像
 图层组就像是 ps 中多个图层组合展示的画面
-![image.png](https://img.hacpai.com/file/2020/01/image-138a7614.png)
+
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498973-1579499742924.png)
 
 ##### 新增图层操作
 
 先配置图层数据库，GeoServer 会自动加载数据库已上传的 shp 文件，即可选中相应图层点击发布
-![image.png](https://img.hacpai.com/file/2020/01/image-f253a50f.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498974-1579499776190.png)
+
 配置坐标系系数，计算边框，渲染地图
-![image.png](https://img.hacpai.com/file/2020/01/image-b79cd416.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-6e0f3034.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498975-1579499792824.png)
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/20/1579498976-1579499801714.png)
 保存成功后即可查看预览图
 
 #### 查看图层预览图
 
-![image.png](https://img.hacpai.com/file/2020/01/image-7ab3915e.png)
-![image.png](https://img.hacpai.com/file/2020/01/image-0b666f71.png)
+
 点击 OpenLayers 后会打开一个新的页面
 ![image.png](https://img.hacpai.com/file/2020/01/image-7161a893.png)
 
