@@ -186,9 +186,15 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 ```java
 public class ThreadSafe extends Thread {
 	public volatile boolean exit = false; public void run() {
-		while (!exit){ //do something
-} } }
+		while (!exit){ 
+			//do something
+		} 
+	
+	}
+}
 ```
+
+
 
 
 
