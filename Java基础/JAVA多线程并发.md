@@ -85,6 +85,10 @@ threadPool.execute(new Runnable() {
 		} 
 	}); 
 } 
-} 
 
 ```
+
+#### 4 种线程池
+Java 里面线程池的顶级接口是 Executor，但是严格意义上讲 Executor 并不是一个线程池，而 只是一个执行线程的工具。真正的线程池接口是 ExecutorService。
+
+
