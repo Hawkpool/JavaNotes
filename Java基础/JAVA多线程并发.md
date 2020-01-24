@@ -126,6 +126,13 @@ scheduledThreadPool.schedule(newRunnable(){
 }, 3, TimeUnit.SECONDS);
 
 scheduledThreadPool.scheduleAtFixedRate(newRunnable(){
-
+	@Override 
+	public void run() { 
+		System.out.println("延迟 1 秒后每三秒执行一次");
+	} 
+},1,3,TimeUnit.SECONDS);
 ```
+
+#### newSingleThreadExecutor
+Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有一个线程）,这个线程 池可以在线程死后（或发生异常时）重新启动一个线程来替代原来的线程继续执行下去！
 
