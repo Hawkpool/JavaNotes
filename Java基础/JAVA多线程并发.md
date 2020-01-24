@@ -26,8 +26,16 @@ public class MyThread extends OtherClass implements Runnable {
 	} 
 }
 
-//启动MyThread，需要首先实例化一个 Thread，并传入自己的MyThread实例： MyThread myThread = new MyThread(); Thread thread = new Thread(myThread); thread.start(); //事实上，当传入一个 Runnable target 参数给 Thread后，Thread 的 run()方法就会调用 target.run() public void run() { if (target != null) { target.run();
-} }
+//启动MyThread，需要首先实例化一个 Thread，并传入自己的MyThread实例： MyThread myThread = new MyThread(); 
+Thread thread = new Thread(myThread); 
+thread.start(); 
+//事实上，当传入一个 Runnable target 参数给 Thread后，Thread 的 run()方法就会调用 target.run() 
+
+public void run() { 
+	if (target != null) { 
+	target.run();
+	} 
+}
 ```
 
 
