@@ -38,5 +38,9 @@ public void run() {
 	} 
 }
 ```
+#### ExecutorService、Callable<Class>、Future 有返回值线程
 
+有返回值的任务必须实现Callable 接口，类似的，无返回值的任务必须 Runnable 接口。
+
+执行 Callable 任务后，可以获取一个 Future 的对象，在该对象上调用 get 就可以获取到Callable 任务返回的Object 了，再结合线程池接口 ExecutorService 就可以实现传说中有返回结果的多线程了。
 
