@@ -17,4 +17,7 @@ MyThread myThread1 = new MyThread(); myThread1.start();
 ```
 
 
-#### 
+#### 实现 Runnable 接口。
+如果自己的类已经 extends 另一个类，就无法直接 extends Thread，此时，可以实现一个 Runnable 接口。
+
+
