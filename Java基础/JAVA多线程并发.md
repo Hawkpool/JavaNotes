@@ -153,3 +153,12 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 直到线程进入可运行(runnable)状态，才有机会再次获得 cpu timeslice 转到运行(running)状 态。
 
 阻塞的情况分三种：
+
+>- 等待阻塞（o.wait->等待对列）： 
+运行(running)的线程执行 o.wait()方法，JVM会把该线程放入等待队列(waitting queue) 中。
+
+- 同步阻塞(lock->锁池) 
+运行(running)的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则 JVM会把该线 程放入锁池(lock pool)中。
+
+- 其他阻塞(sleep/join) 
+运行(running)的线程执行 Thread.sleep(long ms)或 t.join()方法，或者发出了 I/O请求时， JVM会把该线程置为阻塞状态。当 sleep()状态超时、join()等待线程终止或者超时、或者 I/O 处理完毕时，线程重新转入可运行(runnable)状态。
