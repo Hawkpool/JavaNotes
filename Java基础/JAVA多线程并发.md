@@ -176,6 +176,7 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 ### 终止线程 4 种方式
 #### 正常运行结束 
 程序运行结束，线程自动结束。
+
 #### 使用退出标志退出线程
 一般 run()方法执行完，线程就会正常结束，然而，常常有些线程是伺服线程。
 
@@ -196,6 +197,13 @@ public class ThreadSafe extends Thread {
 
 定义了一个退出标志 exit，当 exit 为 true时，while 循环退出，exit 的默认值为 false.在定义 exit 时，使用了一个 Java 关键字 volatile，这个关键字的目的是使 exit 同步，也就是说在同一时刻只 能由一个线程来修改 exit 的值。
 
+#### Interrupt 方法结束线程 
+使用 interrupt()方法来中断线程有两种情况：
+1. 线程处于阻塞状态：如使用了 sleep,同步锁的 wait,socket 中的 receiver,accept 等方法时， 会使线程处于阻塞状态。
+
+当调用线程的 interrupt()方法时，会抛出 InterruptException 异常。 阻塞中的那个方法抛出这个异常，通过代码捕获该异常，然后 break 跳出循环状态，从而让 我们有机会结束这个线程的执行。通常很多人认为只要调用 interrupt 方法线程就会结束，实 际上是错的， 一定要先捕获 InterruptedException异常之后通过 break 来跳出循环，才能正 常结束 run方法。
+
+2. 线程未处于阻塞状态：使用 isInterrupted()判断线程的中断标志来退出循环。当使用 interrupt()方法时，中断标志就会置 true，和使用自定义的标志来控制循环是一样的道理。
 
 
 
