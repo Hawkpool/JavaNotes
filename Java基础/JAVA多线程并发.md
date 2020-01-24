@@ -92,3 +92,5 @@ threadPool.execute(new Runnable() {
 Java 里面线程池的顶级接口是 Executor，但是严格意义上讲 Executor 并不是一个线程池，而 只是一个执行线程的工具。真正的线程池接口是 ExecutorService。
 
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/24/%7B5D7C8D29-84FB-4C5F-ADE4-892A3165B022%7D_20200124101251-1579831990105.jpg)
+
+
