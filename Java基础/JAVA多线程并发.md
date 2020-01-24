@@ -171,6 +171,9 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 >- 调用stop 
 3. 直接调用该线程的 stop()方法来结束该线程—该方法通常容易导致死锁，不推荐使用。
 
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/24/%7BE2AB8A48-4A60-4565-95EE-D93C4F974771%7D_20200124105056-1579834270983.jpg)
+
+
 
 
 
