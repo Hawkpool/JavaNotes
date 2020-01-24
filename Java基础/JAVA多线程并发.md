@@ -207,6 +207,22 @@ public class ThreadSafe extends Thread {
 2. 线程未处于阻塞状态：使用 isInterrupted()判断线程的中断标志来退出循环。
 >当使用 interrupt()方法时，中断标志就会置 true，和使用自定义的标志来控制循环是一样的道理。
 
+```java
+public class ThreadSafe extends Thread { public void run() { 
+	while (!isInterrupted()){ 
+	//非阻塞过程中通过判断中断标志来退出 
+		try{ 
+			Thread.sleep(5*1000);
+	//阻塞过程捕获中断异常来退出
+		}catch(InterruptedException e){ 
+			e.printStackTrace(); 
+			break;
+	//捕获到异常之后，执行 break 跳出循环
+		} } } }
+
+```
+
+
 
 
 
