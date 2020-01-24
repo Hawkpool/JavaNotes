@@ -118,7 +118,14 @@ Java 里面线程池的顶级接口是 Executor，但是严格意义上讲 Execu
 ```java
 ScheduledExecutorService scheduledThreadPool= Executors.newScheduledThreadPool(3);
 
-scheduledThreadPool.schedule(newRunnable(){ @Override public void run() { System.out.println("延迟三秒"); }
+scheduledThreadPool.schedule(newRunnable(){ 
+	@Override 
+	public void run() {
+		System.out.println("延迟三秒"); 
+	}
 }, 3, TimeUnit.SECONDS);
+
+scheduledThreadPool.scheduleAtFixedRate(newRunnable(){
+
 ```
 
