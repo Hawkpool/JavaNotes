@@ -19,5 +19,15 @@ MyThread myThread1 = new MyThread(); myThread1.start();
 
 #### 实现 Runnable 接口。
 如果自己的类已经 extends 另一个类，就无法直接 extends Thread，此时，可以实现一个 Runnable 接口。
+```java
+public class MyThread extends OtherClass implements Runnable { 
+	public void run() { 
+		System.out.println("MyThread.run()");
+	} 
+}
+
+//启动MyThread，需要首先实例化一个 Thread，并传入自己的MyThread实例： MyThread myThread = new MyThread(); Thread thread = new Thread(myThread); thread.start(); //事实上，当传入一个 Runnable target 参数给 Thread后，Thread 的 run()方法就会调用 target.run() public void run() { if (target != null) { target.run();
+} }
+```
 
 
