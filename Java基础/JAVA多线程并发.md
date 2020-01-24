@@ -47,6 +47,7 @@ public void run() {
 ```java
 //创建一个线程池
 ExecutorService pool = Executors.newFixedThreadPool(taskSize); 
+
 // 创建多个有返回值的任务 
 List<Future> list = new ArrayList<Future>(); 
 for (int i = 0; i < taskSize; i++) { 
@@ -54,8 +55,8 @@ for (int i = 0; i < taskSize; i++) {
 // 执行任务并获取 Future 对象 
 	Future f = pool.submit(c); list.add(f); 
 } 
-
-// 关闭线程池 pool.shutdown(); 
+// 关闭线程池 
+pool.shutdown(); 
 // 获取所有并发任务的运行结果
 for (Future f : list) { 
 // 从 Future 对象上获取任务的返回值，并输出到控制台 
@@ -65,4 +66,8 @@ for (Future f : list) {
 ```
 
 #### 基于线程池的方式
-线程和数据库连接这些资源都是非常宝贵的资源。那么每次需要的时候创建，不需要的时候销 毁，是非常浪费资源的。那么我们就可以使用缓存的策略，也就是使用线程池。 
+线程和数据库连接这些资源都是非常宝贵的资源。那么每次需要的时候创建，不需要的时候销毁，是非常浪费资源的。那么我们就可以使用缓存的策略，也就是使用线程池。 
+
+```language
+
+```
