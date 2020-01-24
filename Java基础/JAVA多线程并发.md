@@ -88,9 +88,11 @@ threadPool.execute(new Runnable() {
 
 ```
 
-#### 4 种线程池
+### 4 种线程池
 Java 里面线程池的顶级接口是 Executor，但是严格意义上讲 Executor 并不是一个线程池，而 只是一个执行线程的工具。真正的线程池接口是 ExecutorService。
 
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/24/%7B5D7C8D29-84FB-4C5F-ADE4-892A3165B022%7D_20200124101251-1579831990105.jpg)
 
+#### newCachedThreadPool
+创建一个可根据需要创建新线程的线程池，但是在以前构造的线程可用时将重用它们。对于执行 很多短期异步任务的程序而言，这些线程池通常可提高程序性能。调用 execute 将重用以前构造 的线程（如果线程可用）。如果现有线程没有可用的，则创建一个新线程并添加到池中。终止并 从缓存中移除那些已有 60 秒钟未被使用的线程。因此，长时间保持空闲的线程池不会使用任何资 源。
 
