@@ -157,8 +157,17 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 >- 等待阻塞（o.wait->等待对列）： 
 运行(running)的线程执行 o.wait()方法，JVM会把该线程放入等待队列(waitting queue) 中。
 
-- 同步阻塞(lock->锁池) 
+>- 同步阻塞(lock->锁池) 
 运行(running)的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则 JVM会把该线 程放入锁池(lock pool)中。
 
-- 其他阻塞(sleep/join) 
+>- 其他阻塞(sleep/join) 
 运行(running)的线程执行 Thread.sleep(long ms)或 t.join()方法，或者发出了 I/O请求时， JVM会把该线程置为阻塞状态。当 sleep()状态超时、join()等待线程终止或者超时、或者 I/O 处理完毕时，线程重新转入可运行(runnable)状态。
+
+#### 线程死亡（DEAD） 线程会以下面三种方式结束，结束后就是死亡状态。
+>- 正常结束 
+1. run()或 call()方法执行完成，线程正常结束。
+>- 异常结束 
+2. 线程抛出一个未捕获的 Exception或 Error。
+3. 
+>- 调用stop 
+3. 直接调用该线程的 stop()方法来结束该线程—该方法通常容易导致死锁，不推荐使用。
