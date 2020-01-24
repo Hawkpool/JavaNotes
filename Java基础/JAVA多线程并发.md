@@ -194,7 +194,7 @@ public class ThreadSafe extends Thread {
 }
 ```
 
-
+定义了一个退出标志 exit，当 exit 为 true时，while 循环退出，exit 的默认值为 false.在定义 exit 时，使用了一个 Java 关键字 volatile，这个关键字的目的是使 exit 同步，也就是说在同一时刻只 能由一个线程来修改 exit 的值。
 
 
 
