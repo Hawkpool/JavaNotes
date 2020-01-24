@@ -116,7 +116,9 @@ Java 里面线程池的顶级接口是 Executor，但是严格意义上讲 Execu
 #### newScheduledThreadPool
 创建一个线程池，它可安排在给定延迟后运行命令或者定期地执行。
 ```java
+ScheduledExecutorService scheduledThreadPool= Executors.newScheduledThreadPool(3);
 
-
+scheduledThreadPool.schedule(newRunnable(){ @Override public void run() { System.out.println("延迟三秒"); }
+}, 3, TimeUnit.SECONDS);
 ```
 
