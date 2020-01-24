@@ -173,7 +173,22 @@ Executors.newSingleThreadExecutor()返回一个线程池（这个线程池只有
 
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/01/24/%7BE2AB8A48-4A60-4565-95EE-D93C4F974771%7D_20200124105056-1579834270983.jpg)
 
+### 终止线程 4 种方式
+#### 正常运行结束 
+程序运行结束，线程自动结束。
+#### 使用退出标志退出线程
+一般 run()方法执行完，线程就会正常结束，然而，常常有些线程是伺服线程。
 
+它们需要长时间的运行，只有在外部某些条件满足的情况下，才能关闭这些线程。
+
+使用一个变量来控制循环，例如： 最直接的方法就是设一个boolean类型的标志，并通过设置这个标志为true或 false来控制while 循环是否退出，代码示例：
+
+```java
+public class ThreadSafe extends Thread {
+	public volatile boolean exit = false; public void run() {
+		while (!exit){ //do something
+} } }
+```
 
 
 
