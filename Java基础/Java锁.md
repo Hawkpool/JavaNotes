@@ -216,4 +216,6 @@ Semaphore的锁释放操作也由手动进行，因此与ReentrantLock一样，�
 写锁 
 如果你的代码修改数据，只能有一个人在写，且不能同时读取，那就上写锁。
 
-总之，读的时候上 读锁，写的时候上写锁！ Java 中读写锁有个接口 java.util.concurrent.locks.ReadWriteLock ，也有具体的实现 ReentrantReadWriteLock。
+总之，读的时候上读锁，写的时候上写锁！ 
+
+Java 中读写锁有个接口 java.util.concurrent.locks.ReadWriteLock ，也有具体的实现 ReentrantReadWriteLock。
