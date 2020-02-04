@@ -50,6 +50,8 @@ synchronized 它可以把任意一个非 NULL 的对象当作锁。他属于独�
 
 ### Synchronized实现
 
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/02/04/%7B97F78905-B096-47F5-BB71-8B89ACAB0D55%7D_20200204120338-1580793484633.jpg)
+
 1. JVM 每次从队列的尾部取出一个数据用于锁竞争候选者（OnDeck），但是并发情况下， ContentionList 会被大量的并发线程进行CAS 访问，为了降低对尾部元素的竞争，JVM会将 一部分线程移动到 EntryList 中作为候选竞争线程。
 2. Owner 线程会在 unlock 时，将 ContentionList 中的部分线程迁移到 EntryList 中，并指定 EntryList 中的某个线程为OnDeck 线程（一般是最先进去的那个线程）。
 3. Owner 线程并不直接把锁传递给 OnDeck 线程，而是把锁竞争的权利交给 OnDeck， OnDeck需要重新竞争锁。这样虽然牺牲了一些公平性，但是能极大的提升系统的吞吐量，在 JVM中，也把这种选择行为称之为“竞争切换”。
