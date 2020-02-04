@@ -53,16 +53,28 @@ synchronized 它可以把任意一个非 NULL 的对象当作锁。他属于独�
 ![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/02/04/%7B97F78905-B096-47F5-BB71-8B89ACAB0D55%7D_20200204120338-1580793484633.jpg)
 
 1. JVM 每次从队列的尾部取出一个数据用于锁竞争候选者（OnDeck），但是并发情况下， ContentionList 会被大量的并发线程进行CAS 访问，为了降低对尾部元素的竞争，JVM会将 一部分线程移动到 EntryList 中作为候选竞争线程。
+
 2. Owner 线程会在 unlock 时，将 ContentionList 中的部分线程迁移到 EntryList 中，并指定 EntryList 中的某个线程为OnDeck 线程（一般是最先进去的那个线程）。
+
 3. Owner 线程并不直接把锁传递给 OnDeck 线程，而是把锁竞争的权利交给 OnDeck， OnDeck需要重新竞争锁。这样虽然牺牲了一些公平性，但是能极大的提升系统的吞吐量，在 JVM中，也把这种选择行为称之为“竞争切换”。
+
 4. OnDeck线程获取到锁资源后会变为Owner 线程，而没有得到锁资源的仍然停留在 EntryList 中。如果Owner线程被wait方法阻塞，则转移到WaitSet队列中，直到某个时刻通过notify 或者 notifyAll 唤醒，会重新进去 EntryList 中。
+
 5. 处于 ContentionList、EntryList、WaitSet 中的线程都处于阻塞状态，该阻塞是由操作系统 来完成的（Linux 内核下采用 pthread_mutex_lock 内核函数实现的）。
-6. Synchronized是非公平锁。 Synchronized在线程进入ContentionList 时，等待的线程会先 尝试自旋获取锁，如果获取不到就进入 ContentionList，这明显对于已经进入队列的线程是 不公平的，还有一个不公平的事情就是自旋获取锁的线程还可能直接抢占 OnDeck 线程的锁 资源。 参考：https://blog.csdn.net/zqz_zqz/article/details/70233767
+
+6. Synchronized是非公平锁。 Synchronized在线程进入ContentionList 时，等待的线程会先 尝试自旋获取锁，如果获取不到就进入 ContentionList，这明显对于已经进入队列的线程是 不公平的，还有一个不公平的事情就是自旋获取锁的线程还可能直接抢占 OnDeck 线程的锁 资源。 
+参考：https://blog.csdn.net/zqz_zqz/article/details/70233767
+
 7. 每个对象都有个 monitor 对象，加锁就是在竞争 monitor 对象，代码块加锁是在前后分别加 上monitorenter 和monitorexit 指令来实现的，方法加锁是通过一个标记位来判断的
+
 8. synchronized 是一个重量级操作，需要调用操作系统相关接口，性能是低效的，有可能给线 程加锁消耗的时间比有用操作消耗的时间更多。
+
 9. Java1.6，synchronized进行了很多的优化，有适应自旋、锁消除、锁粗化、轻量级锁及偏向 锁等，效率有了本质上的提高。在之后推出的 Java1.7 与 1.8 中，均对该关键字的实现机理做 了优化。引入了偏向锁和轻量级锁。都是在对象头中有标记位，不需要经过操作系统加锁。
+
 10. 锁可以从偏向锁升级到轻量级锁，再升级到重量级锁。这种升级过程叫做锁膨胀； 11. JDK 1.6 中默认是开启偏向锁和轻量级锁，可以通过-XX:-UseBiasedLocking 来禁用偏向锁。
 
 ## ReentrantLock 可重入锁
 
 ReentantLock 继承接口 Lock 并实现了接口中定义的方法，他是一种可重入锁，除了能完成 synchronized 所能完成的所有工作外，还提供了诸如可响应中断锁、可轮询锁请求、定时锁等 避免多线程死锁的方法。
+
+### Lock接口的主要方法
