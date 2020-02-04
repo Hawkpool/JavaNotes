@@ -94,3 +94,14 @@ ReentantLock 继承接口 Lock 并实现了接口中定义的方法，他是一�
 14. lockInterruptibly（）：如果当前线程未被中断，获取锁 
 15. tryLock（）：尝试获得锁，仅在调用时锁未被线程占用，获得锁 
 16. tryLock(long timeout TimeUnit unit)：如果锁在给定等待时间内没有被另一个线程保持， 则获取该锁。
+
+
+## 非公平锁 
+JVM 按随机、就近原则分配锁的机制则称为不公平锁
+ReentrantLock 在构造函数中提供了是否公平锁的初始化方式，默认为非公平锁。
+非公平锁实际执行的效率要远远超出公平锁，除非程序有特殊需要，否则最常用非公平锁的分配机制。
+
+## 公平锁
+公平锁指的是锁的分配机制是公平的，通常先对锁提出获取请求的线程会先被分配到锁， ReentrantLock 在构造函数中提供了是否公平锁的初始化方式来定义公平锁。
+ReentrantLock 与synchronized 1. ReentrantLock 通过方法 lock()与 unlock()来进行加锁与解锁操作，与 synchronized 会 被 JVM 自动解锁机制不同，ReentrantLock 加锁后需要手动进行解锁。为了避免程序出 现异常而无法正常解锁的情况，使用 ReentrantLock 必须在 finally 控制块中进行解锁操 作。
+2. ReentrantLock 相比 synchronized 的优势是可中断、公平锁、多个锁。这种情况下需要 使用 ReentrantLock。
