@@ -124,9 +124,14 @@ public class MyService {
 			//1：wait 方法等待：
 			//System.out.println("开始wait"); 				
 			condition.await();
-//通过创建Condition 对象来使线程wait，必须先执行 lock.lock 方法获得锁 //:2：signal 方法唤醒 condition.signal();//condition 对象的 signal 方法可以唤醒wait 线程 for (int i = 0; i < 5; i++) {
-System.out.println("ThreadName=" + Thread.currentThread().getName()+ (" " + (i + 1))); }
-} catch (InterruptedException e) { e.printStackTrace();
+			//通过创建Condition 对象来使线程wait，必须先执行 lock.lock 方法获得锁 
+			//:2：signal 方法唤醒 			
+			condition.signal();
+			//condition 对象的 signal 方法可以唤醒wait 线程 
+			for (int i = 0; i < 5; i++) {
+				System.out.println("ThreadName=" + Thread.currentThread().getName()+ (" " + (i + 1))); }
+
+			} catch (InterruptedException e) { e.printStackTrace();
 } finally
 ```
 
