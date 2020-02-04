@@ -109,7 +109,19 @@ ReentrantLock 在构造函数中提供了是否公平锁的初始化方式，默
 2. ReentrantLock 相比 synchronized 的优势是可中断、公平锁、多个锁。这种情况下需要 使用 ReentrantLock。
 
 ReentrantLock实现
-```language
-
+```java
+public class MyService { 
+	private Lock lock = new ReentrantLock();
+	//Lock lock=new ReentrantLock(true);
+	//公平锁 
+	//Lock lock=new ReentrantLock(false);
+//非公平锁
+private Condition condition=lock.newCondition();//创建Condition
+public void testMethod() { try { lock.lock();//lock 加锁 //1：wait 方法等待：
+//System.out.println("开始wait"); condition.await();
+//通过创建Condition 对象来使线程wait，必须先执行 lock.lock 方法获得锁 //:2：signal 方法唤醒 condition.signal();//condition 对象的 signal 方法可以唤醒wait 线程 for (int i = 0; i < 5; i++) {
+System.out.println("ThreadName=" + Thread.currentThread().getName()+ (" " + (i + 1))); }
+} catch (InterruptedException e) { e.printStackTrace();
+} finally
 ```
 
