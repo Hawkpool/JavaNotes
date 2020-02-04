@@ -194,3 +194,5 @@ Semaphore的锁释放操作也由手动进行，因此与ReentrantLock一样，�
 通常我们会使用 synchronized 将该操作变成一个原子操作，但 JVM 为此类操作特意提供了一些同步类，使得使用更方便，且使程序运行效率变得更高。通过相关资料显示，通常AtomicInteger 的性能是 ReentantLock 的好几倍。
 
 
+## 可重入锁（递归锁） 
+本文里面讲的是广义上的可重入锁，而不是单指JAVA下的ReentrantLock。可重入锁，也叫做递归锁，指的是 同一线程 外层函数获得锁之后 ，内层递归函数仍然有获取该锁的代码，但不受影响。在JAVA环境下 ReentrantLock 和 synchronized 都是 可重入锁。
