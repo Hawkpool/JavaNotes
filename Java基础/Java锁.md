@@ -170,6 +170,13 @@ try {
 	semp.acquire(); 
 	try {
 		// 业务逻辑
+	} catch (Exception e) { 
+	} finally { 
+	// 释放许可 
+	semp.release();
+	}
+} catch (InterruptedException e) { 
+}
 
 ```
 
