@@ -32,10 +32,17 @@ JDK1.7 后，去掉此参数，由 jvm控制；
 
 
 ## Synchronized 同步锁
-synchronized 它可以把任意一个非 NULL 的对象当作锁。他属于独占式的悲观锁，同时属于可重 入锁。 
-Synchronized作用范围 
+synchronized 它可以把任意一个非 NULL 的对象当作锁。他属于独占式的悲观锁，同时属于可重入锁。 
+
+### Synchronized作用范围 
 1. 作用于方法时，锁住的是对象的实例(this)； 
 2. 当作用于静态方法时，锁住的是Class实例，又因为Class的相关数据存储在永久带PermGen （jdk1.8 则是 metaspace），永久带是全局共享的，因此静态方法锁相当于类的一个全局锁， 会锁所有调用该方法的线程；
 3. synchronized 作用于一个对象实例时，锁住的是所有以该对象为锁的代码块。它有多个队列， 当多个线程一起访问某个对象监视器的时候，对象监视器会将这些线程存储在不同的容器中。
-Synchronized核心组件 1) Wait Set：哪些调用wait 方法被阻塞的线程被放置在这里； 2) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中； 3) Entry List：Contention List 中那些有资格成为候选资源的线程被移动到 Entry List 中； 4) OnDeck：任意时刻，最多只有一个线程正在竞争锁资源，该线程被成为OnDeck； 5) Owner：当前已经获取到所资源的线程被称为Owner； 6) !Owner：当前释放锁的线程。
+Synchronized核心组件 
+1) Wait Set：哪些调用wait 方法被阻塞的线程被放置在这里； 
+2) Contention List：竞争队列，所有请求锁的线程首先被放在这个竞争队列中； 
+3) Entry List：Contention List 中那些有资格成为候选资源的线程被移动到 Entry List 中； 
+4) OnDeck：任意时刻，最多只有一个线程正在竞争锁资源，该线程被成为OnDeck； 
+5) Owner：当前已经获取到所资源的线程被称为Owner； 
+6) !Owner：当前释放锁的线程。
 Synchronized实现
