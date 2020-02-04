@@ -131,7 +131,11 @@ public class MyService {
 			for (int i = 0; i < 5; i++) {
 				System.out.println("ThreadName=" + Thread.currentThread().getName()+ (" " + (i + 1))); }
 
-			} catch (InterruptedException e) { e.printStackTrace();
-} finally
+			} catch (InterruptedException e) { 		
+				e.printStackTrace();
+			} finally{ lock.unlock(); } 
+	} 
+}
+
 ```
 
