@@ -220,7 +220,7 @@ Semaphore的锁释放操作也由手动进行，因此与ReentrantLock一样，�
 
 Java 中读写锁有个接口 java.util.concurrent.locks.ReadWriteLock ，也有具体的实现 ReentrantReadWriteLock。
 
-### 共享锁和独占锁 概念
+## 共享锁和独占锁 概念
 
 java 并发包提供的加锁模式分为独占锁和共享锁。 
 
@@ -230,5 +230,10 @@ java 并发包提供的加锁模式分为独占锁和共享锁。
 
 ### 共享锁 
 
-共享锁则允许多个线程同时获取锁，并发访问 共享资源，如：ReadWriteLock。共享锁则是一种 乐观锁，它放宽了加锁策略，允许多个执行读操作的线程同时访问共享资源。 1. AQS 的内部类Node定义了两个常量SHARED和 EXCLUSIVE，他们分别标识 AQS队列中等 待线程的锁获取模式。
+共享锁则允许多个线程同时获取锁，并发访问 共享资源，如：ReadWriteLock。共享锁则是一种 乐观锁，它放宽了加锁策略，允许多个执行读操作的线程同时访问共享资源。 
+
+1. AQS 的内部类Node定义了两个常量SHARED和 EXCLUSIVE，他们分别标识 AQS队列中等 待线程的锁获取模式。
 2. java的并发包中提供了ReadWriteLock，读-写锁。它允许一个资源可以被多个读操作访问， 或者被一个 写操作访问，但两者不能同时进行。
+
+
+
