@@ -133,7 +133,9 @@ public class MyService {
 
 			} catch (InterruptedException e) { 		
 				e.printStackTrace();
-			} finally{ lock.unlock(); } 
+			} finally{ 
+				lock.unlock(); 
+			} 
 	} 
 }
 
