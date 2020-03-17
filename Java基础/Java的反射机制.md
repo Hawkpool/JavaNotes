@@ -1,4 +1,3 @@
-![](https://img.hacpai.com/bing/20190922.jpg?imageView2/1/w/960/h/540/interlace/1/q/100)
 
 ## 动态语言
 
@@ -10,6 +9,7 @@
 
 ## 反射机制概念 （运行状态中知道类所有的属性和方法）
 
+![title](https://raw.githubusercontent.com/Hawkpool/Hawk-s/master/gitNote/2020/03/17/image-2a2086c8-1584429206309.png)
 
 在 Java 中的反射机制是指在运行状态中，对于任意一个类都能够知道这个类所有的属性和方法；
 并且对于任意一个对象，都能够调用它的任意一个方法；这种动态获取信息以及动态调用对象方
